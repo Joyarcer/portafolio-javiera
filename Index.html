@@ -3,94 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javiera Oyarce | Portafolio</title>
-    <style>
-        /* Estilos generales para organizar la página en dos columnas */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #fdfdfd;
-            display: flex;
-        }
-
-        /* Menú de navegación lateral fijo */
-        nav {
-            width: 240px;
-            height: 100vh;
-            background-color: #ffffff;
-            border-right: 1px solid #eaeaea;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 30px 20px;
-            box-sizing: border-box;
-        }
-
-        nav h2 {
-            font-size: 1.1rem;
-            color: #111;
-            margin-bottom: 40px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin-bottom: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #555;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        nav ul li a:hover {
-            color: #000;
-            font-weight: bold;
-        }
-
-        /* Contenido principal a la derecha del menú */
-        main {
-            margin-left: 240px; /* Deja espacio para que el menú no tape el contenido */
-            padding: 60px;
-            width: calc(100% - 240px);
-            box-sizing: border-box;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #111;
-        }
-
-        p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-    </style>
+    <title>Javiera Oyarce | Diseñadora en Comunicación Visual</title>
+    
+    <!-- Enlace a Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Enlace a la hoja de estilos CSS que crearemos después -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Menú Lateral al Costado -->
-    <nav>
-        <h2>Javiera Oyarce</h2>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
+    <!-- ================================================= -->
+    <!-- MENÚ LATERAL / NAVEGACIÓN                         -->
+    <!-- ================================================= -->
+    
+    <!-- Header para versión móvil (celular/tablet pequeña) -->
+    <header class="header-mobile">
+        <div class="logo-mobile">Javiera Oyarce</div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
 
-    <!-- Contenido Principal -->
-    <main>
-        <h1>Hola, soy Javiera Oyarce</h1>
-        <p>Diseñadora en Comunicación Visual</p>
+    <!-- Menú lateral fijo para computador -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-brand">
+            <h1>Javiera<br>Oyarce</h1>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-cute-accent">
+            <span>*</span>
+            <span class="cat-symbol">🐱</span>
+        </div>
+    </aside>
+
+    <!-- ================================================= -->
+    <!-- CONTENIDO PRINCIPAL                               -->
+    <!-- ================================================= -->
+    <main class="main-content">
+
+        <!-- 1. SECCIÓN INICIO / PRESENTACIÓN (HERO) -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-container">
+                
+                <!-- Columna de Texto -->
+                <div class="hero-text">
+                    <span class="hero-tag">* Diseño es una forma de cuidado.</span>
+                    <h2>Hola, soy<br><span class="highlight-title">Javiera Oyarce</span></h2>
+                    <p class="hero-profession">Diseñadora en Comunicación Visual</p>
+                    <p class="hero-description">
+                        Interesada en transformar ideas en imágenes que comuniquen, conecten y tengan propósito.
+                    </p>
+                    <div class="hero-action">
+                        <a href="#proyectos" class="btn-primary">Ver proyectos →</a>
+                    </div>
+                </div>
+
+                <!-- Columna Visual / Fotografía (Preparado para reemplazar) -->
+                <div class="hero-visual">
+                    <div class="editorial-frame">
+                        <div class="shape-bg shape-morado"></div>
+                        <div class="shape-bg shape-lavanda"></div>
+                        
+                        <!-- 
+                          FOTO DE PERFIL: 
+                          Cuando tengas tu foto, guárdala en la carpeta /images/ con el nombre 'foto-perfil.jpg'
+                        -->
+                        <img src="images/foto-perfil.jpg" alt="Javiera Oyarce - Retrato" class="hero-img">
+                        
+                        <div class="cute-sticker">🐾</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. SECCIÓN PROYECTOS DESTACADOS -->
+        <section id="proyectos" class="projects-section">
+            <div class="section-header">
+                <h2>Proyectos destacados</h2>
+                <p>Una selección de trabajos con enfoque editorial y experimental.</p>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- Proyecto 01 -->
+                <article class="project-card" data-project="1">
+                    <div class="project-img-wrapper">
+                        <!-- Reemplazar imagen en /images/proyecto-1.jpg -->
+                        <img src="images/proyecto-1.jpg" alt="Identidad Visual">
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <h3>Identidad visual</h3>
+                            <span class="project-category">Proyecto académico</span>
+                        </div>
+                        <span class="project-arrow">→</span>
+                    </div>
+                </article>
+
+                <!-- Proyecto 02 -->
+                <article class="project-card" data-project="2">
+                    <div class="project-img-wrapper">
+                        <!-- Reemplazar imagen en /images/proyecto-2.jpg -->
+                        <img src="images/proyecto-2.jpg" alt="Diseño Editorial">
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <h3>Diseño editorial</h3>
+                            <span class="project-category">Proyecto personal</span>
+                        </div>
+                        <span class="project-arrow">→</span>
+                    </div>
+                </article>
+
+                <!-- Proyecto 03 -->
+                <article class="project-card" data-project="3">
+                    <div class="project-img-wrapper">
+                        <!-- Reemplazar imagen en /images/proyecto-3.jpg -->
+                        <img src="images/proyecto-3.jpg" alt="Material Gráfico">
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <h3>Material gráfico</h3>
+                            <span class="project-category">Evento / Institucional</span>
+                        </div>
+                        <span class="project-arrow">→</span>
+                    </div>
+                </article>
+
+                <!-- Tarjeta: Ver todos los proyectos -->
+                <a href="proyectos.html" class="project-card card-more">
+                    <div class="more-content">
+                        <span class="plus-icon">+</span>
+                        <h3>Ver todos los proyectos</h3>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN FOOTER / CONTACTO -->
+        <footer id="contacto" class="footer-section">
+            <div class="footer-container">
+                <div class="footer-intro">
+                    <span class="footer-tag">* ¿Hablamos?</span>
+                    <h2>Conversemos sobre un proyecto.</h2>
+                    <p>Si quieres conversar sobre una colaboración o revisar mi trabajo con más detalle, escríbeme.</p>
+                </div>
+
+                <div class="footer-links-grid">
+                    <a href="mailto:javiera.oyarce@gmail.com" class="footer-link-item">
+                        <span class="link-icon">✉</span>
+                        <span class="link-text">Correo</span>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-link-item">
+                        <span class="link-icon">in</span>
+                        <span class="link-text">LinkedIn</span>
+                    </a>
+                    <a href="https://behance.net" target="_blank" rel="noopener" class="footer-link-item">
+                        <span class="link-icon">Bē</span>
+                        <span class="link-text">Behance</span>
+                    </a>
+                    <a href="#" class="footer-link-item">
+                        <span class="link-icon">📄</span>
+                        <span class="link-text">CV</span>
+                    </a>
+                </div>
+
+                <div class="footer-bottom">
+                    <a href="#inicio" class="back-to-top">Volver al inicio ↑</a>
+                    <p>© 2026 Javiera Oyarce</p>
+                </div>
+            </div>
+        </footer>
+
     </main>
 
+    <!-- ================================================= -->
+    <!-- MODAL INTERACTIVO (Ventana emergente de proyectos)-->
+    <!-- ================================================= -->
+    <div id="project-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true">
+            <button id="modal-close" class="modal-close" aria-label="Cerrar modal">&times;</button>
+            
+            <div class="modal-grid">
+                <!-- Galería de imágenes dentro del modal -->
+                <div class="modal-gallery">
+                    <div class="modal-main-img-container">
+                        <img id="modal-img" src="" alt="Vista previa del proyecto">
+                    </div>
+                    <div class="modal-gallery-thumbs" id="modal-thumbs">
+                        <!-- Las miniaturas se cargan automáticamente con JavaScript -->
+                    </div>
+                    <div class="modal-controls">
+                        <button id="prev-btn" class="carousel-btn" aria-label="Imagen anterior">←</button>
+                        <span id="image-counter" class="image-counter">01 / 05</span>
+                        <button id="next-btn" class="carousel-btn" aria-label="Imagen siguiente">→</button>
+                    </div>
+                </div>
+
+                <!-- Información detallada del proyecto -->
+                <div class="modal-details">
+                    <span id="modal-category" class="modal-tag-category">Categoría</span>
+                    <h2 id="modal-title">Título del Proyecto</h2>
+                    <p id="modal-desc" class="modal-description">Descripción detallada del proyecto...</p>
+                    
+                    <div class="modal-tags-list" id="modal-tags">
+                        <!-- Etiquetas generadas por JS -->
+                    </div>
+
+                    <div class="modal-pdf-box">
+                        <a href="#" id="modal-pdf-link" class="btn-pdf" target="_blank">
+                            <span class="pdf-icon">📄</span>
+                            Ver desarrollo completo en PDF →
+                        </a>
+                        <span class="pdf-note">Investigación, fundamentos teóricos, proceso y resultado.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo de JavaScript que crearemos al final -->
+    <script src="script.js"></script>
 </body>
 </html>
